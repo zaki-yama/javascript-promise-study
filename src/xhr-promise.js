@@ -16,7 +16,16 @@ function getURL(URL) {
   });
 }
 
-const URL = 'http://httpbin.org/get';
+let URL = 'http://httpbin.org/get';
+getURL(URL)
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+URL = 'http://httpbin.org/status/500';
 getURL(URL)
   .then((value) => {
     console.log(value);
